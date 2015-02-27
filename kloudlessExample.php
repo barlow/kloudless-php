@@ -19,6 +19,8 @@ mysql_select_db($database_localhost, $localhost);
 
 include "kloudlessClass.php";
 
+	$script = $_SERVER["SCRIPT_NAME"];
+
 	
 	$kapiid = "__put_your_API_id_here_";
 	$kkey = "_put_your_key_here_";
