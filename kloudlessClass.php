@@ -1,10 +1,11 @@
 <?php 
 //
-// Copyright Chris Barlow 2010-14
+// Copyright Chris Barlow 2014-15
 //
 // You may do whatever you want with this source code - there are no restrictions.
 //
-//
+// 
+// 
 
 class Kloudless
 {
@@ -54,6 +55,7 @@ class Kloudless
 	
 	}
 
+	// Download a file to the local directory
 	function downloadFile($fileid)
 	{
 		$ch = curl_init(); 
@@ -88,7 +90,7 @@ class Kloudless
 	
 	}
 
-
+	// Download file to a target file name
 	function downloadFileLocally($fileid, $targname)
 	{
 	 	global $GlobalFileHandle;
@@ -129,6 +131,9 @@ class Kloudless
 	
 	}
 	
+	// Download file and send it to the client browser.
+	// Use this to have the file pop as a downloaded item in the browser, without it
+	// being saved to the server's filesystem
 	function sendDownloadFile($fileid, $altName="")
 	{
 		$info = $this->getFileInfo($fileid);
@@ -285,6 +290,7 @@ class Kloudless
 		return $result;
 	}
 	
+	// Update a file using $filepath, as file on the server 
 	function updateFile($fileid, $filepath)
 	{
 		$ch = curl_init(); 
@@ -410,22 +416,6 @@ function curlWriteFile($cp, $data) {
 	  $len = fwrite($GlobalFileHandle, $data);
 	  return $len;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
