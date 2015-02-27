@@ -2,6 +2,9 @@
 //
 // Copyright Chris Barlow 2010-14
 //
+// You may do whatever you want with this source code - there are no restrictions.
+//
+//
 
 class Kloudless
 {
